@@ -2,6 +2,9 @@ span {
   color: red;
   padding-left: 5px;
 }
+.ErrorMessage {
+  color: red;
+}
 .with_example {
   flex-direction: column;
 }
@@ -21,9 +24,6 @@ textarea {
 }
 .nextto {
   display: flex;
-}
-.textbox-name {
-  /* width: 100%; */
 }
 .radio {
   transform: scale(2);

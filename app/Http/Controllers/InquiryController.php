@@ -20,10 +20,10 @@ class InquiryController extends Controller
         $this->Validate($request, Contact::$ValidationRules);
 
         // バリデーション済データの取得
-        $validated = $request->validated();
+        // $validated = $request->validated();
 
         // バリデーション済み入力データの一部を取得
-        $validated = $request->safe()->only(['postcode']);
+        // $validated = $request->safe()->only(['postcode']);
 
 
         // if (Contact::$ValidationRules->fails()) {
@@ -45,9 +45,9 @@ class InquiryController extends Controller
     public function send(Request $request)
     {
         // DBに保存
-        $data = $request->all();
-        Contact::create($data);
-        $data = $request->input();
+        // $data = $request->all();
+        // Contact::create($data);
+        // $data = $request->input();
     }
 
     // サンクスページに遷移
