@@ -1,0 +1,44 @@
+span {
+    color: red;
+    padding-left: 5px;
+}
+.with_example {
+    flex-direction: column;
+}
+input {
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+input:focus,
+textarea:focus {
+    outline: none;
+}
+textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+}
+.textbox-name {
+    width: 48%;
+}
+.family,
+.given {
+    width: 100%;
+}
+/* .gender-item {
+    justify-content: space-between;
+} */
+/* .left {
+    width: 20%;
+}
+.right {
+    width: 80%;
+} */
+
+.radio {
+    transform: scale(2);
+}
+.example {
+    color: gray;
+}

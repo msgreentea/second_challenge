@@ -1,0 +1,40 @@
+h1 {
+    text-align: center;
+}
+.container {
+    padding: 0 20%;
+    /* margin: 0 auto; */
+}
+.frame {
+    margin: 0 auto;
+}
+.item {
+    display: flex;
+    align-items: flex-start;
+    padding-bottom: 10px;
+}
+.item-title {
+    font-size: 18px;
+}
+th {
+    text-align: left;
+}
+th {
+    width: 20%;
+}
+td {
+    width: 80%;
+    /* display: flex;
+    justify-content: space-between; */
+}
+button {
+    display: block;
+    background-color: black;
+    color: white;
+    padding: 5px 50px;
+    margin: 10px auto;
+}
+a {
+    display: block;
+    text-align: center;
+}
