@@ -25,10 +25,6 @@ class ContactRequest extends FormRequest
             'postcode' => mb_convert_kana($this->postcode, 'as'),
             // 'fullname' => $this->input('lastname') . '　' . $this->input('firstname')
         ]);
-
-        // 名前
-        // $data = $this->all();
-        // $data->fullname = $this->input('lastname') . '　' . $this->input('firstname');
     }
     /**
      * Get the validation rules that apply to the request.

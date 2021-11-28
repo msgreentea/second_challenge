@@ -11,7 +11,6 @@ class InquiryController extends Controller
     // /inquiryページを表示
     public function inquiry()
     {
-        // $fullname = $this->lastname . $this->firstname;
         return view('inquiry');
     }
 
@@ -57,6 +56,6 @@ class InquiryController extends Controller
 
         $data = Contact::all();
         return view('confirmation', ['data' => $data]);
-        // return view('confirmation');
+        return view('thanks');
     }
 }

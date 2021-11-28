@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ asset('/css/inquiry.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/share.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('/css/reset.css') }}"> --}}
     <title>お問い合わせ</title>
 </head>
 
@@ -22,30 +23,52 @@
         @endif
         <form class="frame" action="/confirmation" method="POST">
             @csrf
+
+            {{-- <div class="item">
+                <label for=""><h2>お名前<span>※</span></h2></label>
+                <div class="nextto">
+                    <div class="right with_example">
+                        <input class="textbox-name" type="text" name="lastname" value="{{ old('lastname') }}" method="POST">
+                        <p class="example">例）山田</p>
+                    </div>
+                    <div class="right with_example">
+                        <input class="textbox-name" type="text" name="firstname" value="{{ old('firstname') }}" method="POST">
+                        <p class="example">例）太郎</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <label for=""><h2>性別<span>※</span></h2></label>
+                <td class="nextto">
+                    <input class="radio" type="radio" name="gender" value="男性" checked="checked">男性
+                    <input class="radio" type="radio" name="gender" value="女性">女性
+                </td>
+            </div> --}}
+
+
             <table>
-                <tr class="item">
-                    <th><h2 class="item-title">お名前<span>※</span></h2></th>
-                    <td>
-                        <div class="firstname with_example">
-                            <p>{{ old('lastname') }}</p>
+                <tr>
+                    <th><label for=""><h2>お名前<span>※</span></h2></label></th>
+                    <td class="nextto"">
+                        <div class="right with_example">
                             <input class="textbox-name" type="text" name="lastname" value="{{ old('lastname') }}" method="POST">
                             <p class="example">例）山田</p>
                         </div>
-                        <div class="lastname with_example">
+                        <div class="right with_example">
                             <input class="textbox-name" type="text" name="firstname" value="{{ old('firstname') }}" method="POST">
                             <p class="example">例）太郎</p>
                         </div>
                     </td>
                 </tr>
                 <tr>
-                    <th><h2 class="item-title">性別<span>※</span></h2></th>
-                    <td>
+                    <th><h2>性別<span>※</span></h2></th>
+                    <td class="nextto">
                         <input class="radio" type="radio" name="gender" value="男性" checked="checked">男性
                         <input class="radio" type="radio" name="gender" value="女性">女性
                     </td>
                 </tr>
                 <tr>
-                    <th><h2 class="item-title">メールアドレス<span>※</span></h2></th>
+                    <th><h2>メールアドレス<span>※</span></h2></th>
                     <td>
                         <div class="right with_example">
                             <input type="text" name="email" value="{{ old('email') }}">
@@ -54,8 +77,8 @@
                     </td>
                 </tr>
                 <tr>
-                    <th><h2 class="item-title">郵便番号<span>※</span></h2></th>
-                    <td>
+                    <th><h2>郵便番号<span>※</span></h2></th>
+                    <td class="nextto">
                         &#12306;
                         <div class="with_example">
                             <input type="text" name="postcode" value="{{ old('postcode') }}">
@@ -64,7 +87,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <th><h2 class="item-title">住所<span>※</span></h2></th>
+                    <th><h2>住所<span>※</span></h2></th>
                     <td>
                         <div class="right with_example">
                             <input type="text" name="address" value={{ old('address') }}>
@@ -73,7 +96,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <th><h2 class="item-title">建物名</h2></th>
+                    <th><h2>建物名</h2></th>
                     <td>
                         <div class="right with_example">
                             <input type="text" name="building_name" value="{{ old('building_name') }}">
@@ -82,7 +105,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <th><h2 class="item-title">ご意見<span>※</span></h2></th>
+                    <th><h2>ご意見<span>※</span></h2></th>
                     <td>
                         <div class="right">
                             <textarea name="opinion" id="" cols="30" rows="10">{{ old('opinion') }}</textarea>

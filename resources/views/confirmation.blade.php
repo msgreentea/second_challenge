@@ -16,14 +16,12 @@
                 <tr>
                     <th><h2 class="item-title">お名前</h2></th>
                     {{-- <td>{{ $data->fullname }}</td> --}}
-                <p>{{ $data->lastname }}{{ $data->firstname }}</p>
-                    {{-- <td>{{ $data->firstname }}</td> --}}
+                <p>{{ $data->lastname }}　{{ $data->firstname }}</p>
                     {{-- <input type="hidden" name="lastname" value="{{ $data->lastname }}"> --}}
                     {{-- <input type="hidden" name="firstname" value="{{ $data->firstname }}"> --}}
                 </tr>
                 <tr>
                     <th><h2 class="item-title">性別</h2></th>
-                    {{-- <td>男</td> --}}
                     <td>{{ $data->gender }}</td>
                     <input type="hidden" name="gender" value="{{ $data->gender }}">
                 </tr>
